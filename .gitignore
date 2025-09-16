@@ -118,3 +118,4 @@
 /src/CQRS-ES/CQRS.Core/obj/Debug/net9.0/CQRS.Core.GeneratedMSBuildEditorConfig.editorconfig
 /src/CQRS-ES/CQRS.Core/obj/CQRS.Core.csproj.nuget.g.props
 /src/CQRS-ES/CQRS.Core/obj/CQRS.Core.csproj.nuget.g.targets
+/src/SM-Post/Post.Common/Post.Common/obj/project.nuget.cache
