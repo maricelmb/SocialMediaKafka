@@ -33,6 +33,71 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "CQRS.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/CQRS.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CQRS.Core.dll": {}
+        }
+      },
+      "Post.Cmd.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CQRS.Core": "1.0.0",
+          "Post.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Post.Cmd.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Post.Cmd.Domain.dll": {}
+        }
+      },
+      "Post.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CQRS.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Post.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Post.Common.dll": {}
+        }
+      },
+      "Post.Query.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CQRS.Core": "1.0.0",
+          "Post.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Post.Query.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Post.Query.Domain.dll": {}
+        }
+      },
+      "Post.Query.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CQRS.Core": "1.0.0",
+          "Post.Cmd.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Post.Query.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Post.Query.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -67,11 +132,40 @@
         "microsoft.openapi.1.6.17.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "CQRS.Core/1.0.0": {
+      "type": "project",
+      "path": "../../../CQRS-ES/CQRS.Core/CQRS.Core.csproj",
+      "msbuildProject": "../../../CQRS-ES/CQRS.Core/CQRS.Core.csproj"
+    },
+    "Post.Cmd.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Post.Cmd/Post.Cmd.Domain/Post.Cmd.Domain.csproj",
+      "msbuildProject": "../../Post.Cmd/Post.Cmd.Domain/Post.Cmd.Domain.csproj"
+    },
+    "Post.Common/1.0.0": {
+      "type": "project",
+      "path": "../../Post.Common/Post.Common/Post.Common.csproj",
+      "msbuildProject": "../../Post.Common/Post.Common/Post.Common.csproj"
+    },
+    "Post.Query.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Post.Query.Domain/Post.Query.Domain.csproj",
+      "msbuildProject": "../Post.Query.Domain/Post.Query.Domain.csproj"
+    },
+    "Post.Query.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Post.Query.Infrastructure/Post.Query.Infrastructure.csproj",
+      "msbuildProject": "../Post.Query.Infrastructure/Post.Query.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Microsoft.AspNetCore.OpenApi >= 9.0.4"
+      "CQRS.Core >= 1.0.0",
+      "Microsoft.AspNetCore.OpenApi >= 9.0.4",
+      "Post.Common >= 1.0.0",
+      "Post.Query.Domain >= 1.0.0",
+      "Post.Query.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -105,7 +199,20 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\CQRS-ES\\CQRS.Core\\CQRS.Core.csproj": {
+              "projectPath": "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\CQRS-ES\\CQRS.Core\\CQRS.Core.csproj"
+            },
+            "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Common\\Post.Common\\Post.Common.csproj": {
+              "projectPath": "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Common\\Post.Common\\Post.Common.csproj"
+            },
+            "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj": {
+              "projectPath": "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj"
+            },
+            "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Query\\Post.Query.Infrastructure\\Post.Query.Infrastructure.csproj": {
+              "projectPath": "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Query\\Post.Query.Infrastructure\\Post.Query.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
