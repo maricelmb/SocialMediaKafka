@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Post.Query.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+707f6ffcf636a1dcf6c9bd7a18473effab743456")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc93d389ff3d3d7d2518afe07affae5a75533a65")]
 [assembly: System.Reflection.AssemblyProductAttribute("Post.Query.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Post.Query.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
