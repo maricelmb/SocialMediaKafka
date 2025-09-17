@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cqrs_core.Messages
+namespace CQRS_Core.Messages
 {
     public abstract class Message
     {

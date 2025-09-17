@@ -1,4 +1,4 @@
-﻿namespace cqrs_core;
+﻿namespace CQRS_Core;
 
 public class Class1
 {
