@@ -1,9 +1,12 @@
 using CQRS.Core.Domain;
+using CQRS.Core.Infrastructure;
 using Post.Cmd.Infrastructure.Config;
 using Post.Cmd.Infrastructure.EventStoreRepository;
+using Post.Cmd.Infrastructure.Stores;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IEventStoreRepository, EventStoreRepository>();
+builder.Services.AddScoped<IEventStore, EventStore>();
 
 // insert mongodbconfig section to IOptions
 builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection(nameof(MongoDbConfig)));

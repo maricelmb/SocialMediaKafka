@@ -50,7 +50,7 @@ namespace CQRS.Core.Domain
             ApplyChange(@event, true);
         }
 
-        public void ReplayEvent(IEnumerable<BaseEvent> events)
+        public void ReplayEvents(IEnumerable<BaseEvent> events)
         {
             foreach (var @event in events)
             {
