@@ -89,7 +89,7 @@ namespace Post.Cmd.Domain.Aggregates
 
             if (string.IsNullOrWhiteSpace(comment))
             {
-                throw new InvalidOperationException($"The value of {nameof(comment)} cannot be null or empty. Please provide a valid {nameof(message)}!");
+                throw new InvalidOperationException($"The value of {nameof(comment)} cannot be null or empty. Please provide a valid {nameof(comment)}!");
             }
 
             RaiseEvent(new CommentAddedEvent
