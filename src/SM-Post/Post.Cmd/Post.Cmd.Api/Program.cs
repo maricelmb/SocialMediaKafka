@@ -1,4 +1,9 @@
+using Post.Cmd.Infrastructure.Config;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// insert mongodbconfig section to IOptions
+builder.Services.Configure<MongoDbConfig>(builder.Configuration.GetSection(nameof(MongoDbConfig)));
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
