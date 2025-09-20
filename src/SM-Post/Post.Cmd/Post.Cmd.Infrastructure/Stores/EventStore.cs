@@ -3,6 +3,7 @@ using CQRS.Core.Domain;
 using CQRS.Core.Events;
 using CQRS.Core.Exceptions;
 using CQRS.Core.Infrastructure;
+using CQRS.Core.Producers;
 using Post.Cmd.Domain.Aggregates;
 using System.ComponentModel.DataAnnotations;
 
@@ -11,10 +12,12 @@ namespace Post.Cmd.Infrastructure.Stores
     public class EventStore : IEventStore
     {
         private readonly IEventStoreRepository _eventStoreRepository;
+        private readonly IEventProducer _eventProducer;
 
-        public EventStore(IEventStoreRepository eventStoreRepository)
+        public EventStore(IEventStoreRepository eventStoreRepository, IEventProducer eventProducer)
         {
-            this._eventStoreRepository = eventStoreRepository;
+            _eventStoreRepository = eventStoreRepository;
+            _eventProducer = eventProducer;
         }
         public async Task<List<BaseEvent>> GetEventsAsync(Guid aggregateId)
         {
@@ -32,9 +35,7 @@ namespace Post.Cmd.Infrastructure.Stores
         {
             var eventStream = await _eventStoreRepository.FindByAggregateId(aggregateId);
 
-
-            //[^1]: eventStream.Count - 1
-            if(expectedVersion != -1 && eventStream[^1].Version != expectedVersion)
+            if (expectedVersion != -1 && eventStream[^1].Version != expectedVersion)
             {
                 throw new ConcurrencyException();
             }
@@ -57,8 +58,10 @@ namespace Post.Cmd.Infrastructure.Stores
                 };
 
                 await _eventStoreRepository.SaveAsync(eventModel);
+
+                var topic = Environment.GetEnvironmentVariable("KAFKA_TOPIC") ?? "PostEvents";
+                await _eventProducer.ProduceAsync<BaseEvent>(topic, @event); // Explicitly specify the type argument
             }
-           
         }
     }
 }
