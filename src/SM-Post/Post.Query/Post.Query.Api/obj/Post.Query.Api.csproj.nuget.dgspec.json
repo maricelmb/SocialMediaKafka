@@ -278,6 +278,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[9.0.9, )"
             }
           },
           "imports": [
@@ -408,6 +412,9 @@
               },
               "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Cmd\\Post.Cmd.Domain\\Post.Cmd.Domain.csproj": {
                 "projectPath": "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Cmd\\Post.Cmd.Domain\\Post.Cmd.Domain.csproj"
+              },
+              "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj": {
+                "projectPath": "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj"
               }
             }
           }

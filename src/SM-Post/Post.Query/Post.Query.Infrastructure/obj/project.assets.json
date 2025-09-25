@@ -1738,6 +1738,20 @@
         "runtime": {
           "bin/placeholder/Post.Common.dll": {}
         }
+      },
+      "Post.Query.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CQRS.Core": "1.0.0",
+          "Post.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Post.Query.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Post.Query.Domain.dll": {}
+        }
       }
     }
   },
@@ -4372,6 +4386,11 @@
       "type": "project",
       "path": "../../Post.Common/Post.Common/Post.Common.csproj",
       "msbuildProject": "../../Post.Common/Post.Common/Post.Common.csproj"
+    },
+    "Post.Query.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Post.Query.Domain/Post.Query.Domain.csproj",
+      "msbuildProject": "../Post.Query.Domain/Post.Query.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4380,7 +4399,8 @@
       "Confluent.Kafka >= 2.11.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.9",
       "Microsoft.Extensions.Hosting >= 9.0.9",
-      "Post.Cmd.Domain >= 1.0.0"
+      "Post.Cmd.Domain >= 1.0.0",
+      "Post.Query.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4420,6 +4440,9 @@
             },
             "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Cmd\\Post.Cmd.Domain\\Post.Cmd.Domain.csproj": {
               "projectPath": "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Cmd\\Post.Cmd.Domain\\Post.Cmd.Domain.csproj"
+            },
+            "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj": {
+              "projectPath": "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj"
             }
           }
         }
