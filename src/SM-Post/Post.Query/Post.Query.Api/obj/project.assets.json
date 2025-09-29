@@ -199,25 +199,6 @@
           }
         }
       },
-      "Microsoft.AspNetCore.OpenApi/9.0.4": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.OpenApi": "1.6.17"
-        },
-        "compile": {
-          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -1165,19 +1146,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.OpenApi/1.6.17": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.SqlServer.Server/1.0.0": {
         "type": "package",
         "compile": {
@@ -1993,22 +1961,6 @@
         "runtimes/win-x86/native/vcruntime140.dll",
         "runtimes/win-x86/native/zlib1.dll",
         "runtimes/win-x86/native/zstd.dll"
-      ]
-    },
-    "Microsoft.AspNetCore.OpenApi/9.0.4": {
-      "sha512": "GfZWPbZz1aAtEO3wGCkpeyRc0gzr/+VRHnUgY/YjqVPDlHbeKWCXw3IxKarQdo9myC2O1QBf652Mo50QqbXYRg==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.openapi/9.0.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll",
-        "lib/net9.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
-        "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -3370,21 +3322,6 @@
         "runtime.json"
       ]
     },
-    "Microsoft.OpenApi/1.6.17": {
-      "sha512": "Le+kehlmrlQfuDFUt1zZ2dVwrhFQtKREdKBo+rexOwaCoYP0/qpgT9tLxCsZjsgR5Itk1UKPcbgO+FyaNid/bA==",
-      "type": "package",
-      "path": "microsoft.openapi/1.6.17",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/netstandard2.0/Microsoft.OpenApi.dll",
-        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
-        "lib/netstandard2.0/Microsoft.OpenApi.xml",
-        "microsoft.openapi.1.6.17.nupkg.sha512",
-        "microsoft.openapi.nuspec"
-      ]
-    },
     "Microsoft.SqlServer.Server/1.0.0": {
       "sha512": "N4KeF3cpcm1PUHym1RmakkzfkEv3GRMyofVv40uXsQhCQeglr2OHNcUk2WOG51AKpGO8ynGpo9M/kFXSzghwug==",
       "type": "package",
@@ -4556,9 +4493,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "CQRS.Core >= 1.0.0",
-      "Microsoft.AspNetCore.OpenApi >= 9.0.4",
       "Microsoft.EntityFrameworkCore.Proxies >= 9.0.9",
-      "Post.Common >= 1.0.0",
       "Post.Query.Domain >= 1.0.0",
       "Post.Query.Infrastructure >= 1.0.0"
     ]
@@ -4598,9 +4533,6 @@
             "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\CQRS-ES\\CQRS.Core\\CQRS.Core.csproj": {
               "projectPath": "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\CQRS-ES\\CQRS.Core\\CQRS.Core.csproj"
             },
-            "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Common\\Post.Common\\Post.Common.csproj": {
-              "projectPath": "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Common\\Post.Common\\Post.Common.csproj"
-            },
             "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj": {
               "projectPath": "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj"
             },
@@ -4626,10 +4558,6 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
-          "Microsoft.AspNetCore.OpenApi": {
-            "target": "Package",
-            "version": "[9.0.4, )"
-          },
           "Microsoft.EntityFrameworkCore.Proxies": {
             "target": "Package",
             "version": "[9.0.9, )"

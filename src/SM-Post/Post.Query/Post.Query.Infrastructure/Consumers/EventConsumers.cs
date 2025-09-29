@@ -30,7 +30,7 @@ namespace Post.Query.Infrastructure.Consumers
             {
                 var consumerResult = consumer.Consume();
 
-                if (consumerResult?.Message != null) continue;
+                if (consumerResult?.Message == null) continue;
 
                 var options = new JsonSerializerOptions
                 {

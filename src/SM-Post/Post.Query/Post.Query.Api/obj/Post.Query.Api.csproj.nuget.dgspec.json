@@ -247,9 +247,6 @@
               "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\CQRS-ES\\CQRS.Core\\CQRS.Core.csproj": {
                 "projectPath": "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\CQRS-ES\\CQRS.Core\\CQRS.Core.csproj"
               },
-              "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Common\\Post.Common\\Post.Common.csproj": {
-                "projectPath": "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Common\\Post.Common\\Post.Common.csproj"
-              },
               "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj": {
                 "projectPath": "C:\\mari\\prog\\dotNet-weba\\Microservices\\kafka\\src\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj"
               },
@@ -275,10 +272,6 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
             "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
               "version": "[9.0.9, )"

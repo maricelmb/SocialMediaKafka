@@ -8,6 +8,11 @@ namespace Post.Query.Infrastructure.Repositories
     public class PostRepository : IPostRepository
     {
         private readonly DatabaseContextFactory _contextFactory;
+
+        public PostRepository(DatabaseContextFactory contextFactory)
+        {
+            _contextFactory = contextFactory;
+        }
         public async Task CreateAsync(PostEntity post)
         {
             using DatabaseContext context = _contextFactory.CreateDbContext();
