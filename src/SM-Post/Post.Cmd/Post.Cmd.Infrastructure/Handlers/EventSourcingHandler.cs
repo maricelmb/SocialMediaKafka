@@ -1,5 +1,6 @@
 ﻿using CQRS.Core.Domain;
 using CQRS.Core.Handlers;
+using CQRS.Core.Infrastructure;
 using Post.Cmd.Domain.Aggregates;
 using Post.Cmd.Infrastructure.Stores;
 
@@ -7,9 +8,9 @@ namespace Post.Cmd.Infrastructure.Handlers
 {
     public class EventSourcingHandler : IEventSourcingHandler<PostAggregate>
     {
-        private readonly EventStore _eventStore;
+        private readonly IEventStore _eventStore;
 
-        public EventSourcingHandler(EventStore eventStore)
+        public EventSourcingHandler(IEventStore eventStore)
         {
             _eventStore = eventStore;
         }

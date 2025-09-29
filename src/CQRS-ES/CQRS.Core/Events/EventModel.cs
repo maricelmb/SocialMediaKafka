@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace CQRS.Core.Events
 {
@@ -10,6 +11,7 @@ namespace CQRS.Core.Events
 
         public DateTime Timestamp { get; set; }
 
+        [BsonGuidRepresentation(GuidRepresentation.Standard)]
         public Guid AggregateIdentifier { get; set; }
 
         public string AggregateType { get; set; }
