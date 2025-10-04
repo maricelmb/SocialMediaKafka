@@ -52,7 +52,7 @@ namespace Post.Query.Infrastructure.Handlers
             var comment = new CommentEntity
             {
                 PostId = @event.Id,
-                CommentId = @event.Id,
+                CommentId = @event.CommentId,
                 CommentDate = @event.CommentDate,
                 Comment = @event.Comment,
                 Username = @event.Username,

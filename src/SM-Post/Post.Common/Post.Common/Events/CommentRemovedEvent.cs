@@ -1,4 +1,6 @@
 ﻿using CQRS.Core.Events;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
 
 namespace Post.Common.Events
 {
@@ -9,6 +11,7 @@ namespace Post.Common.Events
             
         }
 
+        [BsonGuidRepresentation(GuidRepresentation.Standard)]
         public Guid CommentId { get; set; }
     }
 }
