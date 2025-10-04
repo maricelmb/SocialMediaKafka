@@ -166,7 +166,7 @@ namespace Post.Cmd.Domain.Aggregates
                 throw new InvalidOperationException("The post has already been removed.");
             }
             
-            if (_author.Equals(username, StringComparison.CurrentCultureIgnoreCase))
+            if (!_author.Equals(username, StringComparison.CurrentCultureIgnoreCase))
             { 
                 throw new InvalidOperationException("You are not allowed to delete a post that was made by another user.");
             }
