@@ -56,7 +56,7 @@ namespace Post.Query.Infrastructure.Repositories
                 .ToListAsync();
         }
 
-        public async Task<List<PostEntity>> ListWithCommentsAsysnc(int numberOfComments)
+        public async Task<List<PostEntity>> ListWithCommentsAsysnc()
         {
             using DatabaseContext context = _contextFactory.CreateDbContext();
 

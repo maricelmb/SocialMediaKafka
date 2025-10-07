@@ -16,6 +16,6 @@ namespace Post.Query.Domain.Repositories
 
         Task<List<PostEntity>> ListWithLikesAsysnc(int numberOfLikes);
 
-        Task<List<PostEntity>> ListWithCommentsAsysnc(int numberOfComments);
+        Task<List<PostEntity>> ListWithCommentsAsysnc();
     }
 }
