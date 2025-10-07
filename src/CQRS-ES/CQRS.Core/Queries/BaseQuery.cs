@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CQRS.Core.BaseQuery
+namespace CQRS.Core.Queries.BaseQuery
 {
     public abstract class BaseQuery
     {
