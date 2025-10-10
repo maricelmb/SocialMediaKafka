@@ -1,7 +1,9 @@
 using Confluent.Kafka;
 using CQRS.Core.Consumers;
+using CQRS.Core.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Post.Query.Api.Queries;
+using Post.Query.Domain.Entities;
 using Post.Query.Domain.Repositories;
 using Post.Query.Infrastructure.Consumers;
 using Post.Query.Infrastructure.DataAccess;
@@ -38,7 +40,7 @@ dispatcher.RegisterHandler<FindPostByAuthorQuery>(queryHandler.HandleAsync);
 dispatcher.RegisterHandler<FindPostByIdQuery>(queryHandler.HandleAsync);
 dispatcher.RegisterHandler<FindPostWithCommentQuery>(queryHandler.HandleAsync);
 dispatcher.RegisterHandler<FindPostWithLikesQuery>(queryHandler.HandleAsync);
-builder.Services.AddSingleton<QueryDispatcher>(dispatcher);
+builder.Services.AddScoped<IQueryDispatcher<PostEntity>>(_ => dispatcher);
 
 builder.Services.AddControllers();
 builder.Services.AddHostedService<ConsumerHostedService>();
