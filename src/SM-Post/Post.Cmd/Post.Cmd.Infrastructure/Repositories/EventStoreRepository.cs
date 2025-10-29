@@ -28,5 +28,11 @@ namespace Post.Cmd.Infrastructure.EventStoreRepository
         {
             await _eventStoreCollection.InsertOneAsync(@event).ConfigureAwait(false);
         }
+
+        public async Task<List<EventModel>> FindAllAsync()
+        {
+            //find everything in the collection
+            return await _eventStoreCollection.Find(_ => true).ToListAsync().ConfigureAwait(false);
+        }
     }
 }
