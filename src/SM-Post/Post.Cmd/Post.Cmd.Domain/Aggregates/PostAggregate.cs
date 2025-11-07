@@ -4,6 +4,7 @@ using Post.Common.Events;
 
 namespace Post.Cmd.Domain.Aggregates
 {
+    //Responsible for creating the different events related to a post    
     public class PostAggregate : AggregateRoot
     {
         private bool _active;

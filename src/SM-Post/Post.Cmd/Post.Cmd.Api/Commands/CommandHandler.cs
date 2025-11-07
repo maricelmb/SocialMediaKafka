@@ -4,6 +4,7 @@ using Post.Cmd.Domain.Aggregates;
 
 namespace Post.Cmd.Api.Commands
 {
+    //Handles all commands 
     public class CommandHandler : ICommandHandler
     {
         private readonly IEventSourcingHandler<PostAggregate> _eventSourcingHandler;

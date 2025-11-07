@@ -1,7 +1,10 @@
 ﻿using CQRS.Core.Events;
 
 namespace CQRS.Core.Domain
-{
+{  
+    // An aggregate root is an entity that serves as the entry point for accessing and
+    // manipulating a group of related entities (the aggregate)
+    // Tracks the changes made to the aggregate by storing the events that represent those changes
     public abstract class AggregateRoot
     {
         protected Guid _id;
